@@ -9,10 +9,10 @@ class DB{
 
 	function __construct(){
 		date_default_timezone_set('Africa/Nairobi');
-		$this->host="192.168.5.7";
+		$this->host="localhost";
 		$this->user="crpindicators";
-		$this->pass="26ztdr39";
-		$this->database="crpindicators_2016a";
+		$this->pass="12345678";
+		$this->database="crpindicators";
 		$this->period="2016 Round 1";
 		
 		$auth = new stdClass();
