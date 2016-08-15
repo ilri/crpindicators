@@ -1,0 +1,22 @@
+<?php
+class DB{
+	var $host;
+	var $user;
+	var $pass;
+	var $database;
+
+	var $connection;
+
+	function __construct(){
+		$this->host="localhost";
+		$this->user="root";
+		$this->pass="jgatheru";
+		$this->database="realdb";
+
+		$con=mysql_connect($this->host,$this->user,$this->pass) or die("Can not establish Connection");
+		$this->connection=$con;
+		if($con)
+			mysql_select_db($this->database,$con) or die("Can not select Database");
+	}
+}
+?>

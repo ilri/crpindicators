@@ -1,0 +1,139 @@
+/*---------------common Elements--------------*/
+div{
+	border:0px dotted #333; margin:0px; padding:0px;
+}
+div ul{
+	margin:0px;
+	padding:0px;
+	list-style:none;
+}
+
+div ul li
+{
+	margin:0px;
+	padding:0px;
+}
+block ul, .item-list ul {
+margin:0px;
+padding:0px;
+}
+div p
+{
+	margin:0px;
+	padding:0px;
+}
+img{
+border:none;
+}
+a img{
+border:none;
+}
+.clearb
+{
+	clear:both; margin:0px; padding:0px;
+}
+.block{margin:0px;}
+/*-----------Begining of Menu-------------------*/
+div#primary{
+	margin:0;
+	overflow:hidden;
+	padding:0 5px 5px  5px;
+	position:relative;
+	z-index:5;
+}
+div#primary ul.links {
+	font-size:16px;
+	margin:0;
+	padding:0;
+}
+div#primary ul.links li {
+float:left;
+position:relative;
+z-index:6;
+}
+div#primary ul.links li a {
+	color:#333;
+	display:block;
+	font-weight:bold;
+	padding:6px 10px 6px 9px;
+	text-align:center;
+	text-decoration:none;
+}
+div#primary ul.links li a.one {
+margin:0 3px 0 0;
+padding:5px 12px 3px;
+}
+div#primary ul.links li a:hover, div#primary ul.links li .current {
+
+	color:#FFCC00;
+text-decoration:none;
+}
+div#primary ul.links li a:active, div#primary ul.links li a:focus {
+	color:#FFCC00;
+	text-decoration:none;
+}
+/*--------------End of menu--------------------*/
+
+h4, h3, h2, h1,h5,h6{ padding:2px; margin:0px;}
+.page-title{
+	float:left;
+	padding:3px 10px;
+	background-color:#093b5a;
+	-moz-border-radius: 2px;
+	-webkit-border-radius: 2px;
+	margin:3px 7px 4px;
+	font-size: 15px;
+	color:#fff;
+	/*font-weight:bold;*/
+}
+.navigation{
+	float:right;
+	color:#006aa7;
+	background-color:#093b5a; position:relative;
+	margin:4px 10px 3px;
+	padding:3px 5px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+}
+.company-title{
+	float:left;
+	padding:3px 10px;
+	/*background-color:#94831F;*/
+	-moz-border-radius: 2px;
+	-webkit-border-radius: 2px;
+	margin-left:35%;
+	font-size: 20px;
+	color:#F4F4F4;
+	font-weight:bold;
+}
+div#navamenu{
+	width:auto;
+	position:absolute;
+	right:40px; z-index:20;
+	top:-1px;
+	background-color:#fff;
+	padding:4px 2px 4px 2px;
+	border:solid 1px #ccc;
+}
+ul.navul{margin:0px; padding:0px; list-style:none;}
+ul.navul li{
+padding:0px; margin:1px 0px;
+}
+ul.navul li a {
+background-color:#093b5a;
+color:#E1E1E1;
+display:block;
+margin:0px 2px;
+padding:5px 13px 5px 5px;
+text-decoration:none;
+
+}
+ul.navul li a:hover{
+background-color:#006aa7;
+text-decoration:none;
+}
+/*---------------End of Search--------------*/
+/*---------------<img src="../edit.png" alt="edit" title="edit" />orial--------------*/
+
+/*---------------End of Media Box--------------*/
+/*---------------Beginning of footer-------------*/

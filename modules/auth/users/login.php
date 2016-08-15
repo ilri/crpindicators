@@ -1,0 +1,101 @@
+<?
+session_start();
+require_once("../../../DB.php");
+require_once("../../../lib.php");
+require_once("Users_class.php");
+require_once '../../sys/config/Config_class.php';
+
+$db=new DB();
+$users=new Users();
+
+$url=$_GET['url'];
+if(!empty($url))
+{
+	$url=$url;
+}
+
+$config = new Config();
+$fields=" * ";
+$join="  ";
+$where="";
+$config->retrieve($fields, $join, $where, $having, $groupby, $orderby);
+
+while($con=mysql_fetch_object($config->result)){
+	$_SESSION[$con->name]=$con->value;
+}
+
+$levelerror=$_GET['levelerror'];
+if($levelerror==1)
+{
+	$levelerror="You do not have the right priviledges to view this page. Login with an Account with higher priviledges.";
+	$home="<a href='../'>Go To Home</a>";
+}
+
+$obj=(object)$_POST;
+if($obj->action=="Login")
+{
+	$username=trim($obj->username);
+	$password=trim($obj->password);
+	
+	//change to lower case
+	$username=strtolower($username);
+	//$password=strtolower($password);
+	if(empty($username))
+	{
+	$error="username is required";
+	}
+	elseif(empty($password))
+	{
+	$error="password is required";
+	}
+	else
+	{	
+		$password=md5($password);
+		$fields=" * ";
+		$join="  ";
+		$where=" where username='$username' and password='$password' ";
+		$users->retrieve($fields,$join,$where,$having,$groupby,$orderby);
+		$user=$users->fetchObject;
+		
+		if($users->affectedRows==1)
+		{
+			if($user->status=="Active")
+			{
+				$user->lastlogin=date("Y-m-d H:i:s");
+				//$users->edit($user);
+				$_SESSION['username']=$user->username;
+				$_SESSION['password']=$user->password;
+				$_SESSION['level']=$user->levelid;//echo $_SESSION['level'];
+				$_SESSION['userid']=$user->id;
+				
+				$us = new Users();
+				$ob=$user;
+				$us->edit($ob);
+				
+				if(!empty($url))
+				{
+					if (strlen(strstr($url,"sales.php"))>0) {
+						$url="../sales/";
+					}
+					redirect($url);
+				}
+				else
+				{
+					redirect("../../index.php");
+				}
+			}
+			else
+			{
+				$error="User Account is inactive. Contact Administrator";
+			}
+		}
+		else
+		{
+		$error="Invalid username and password";
+		}
+	}
+}
+include "login.html";
+
+
+?>

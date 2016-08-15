@@ -1,0 +1,167 @@
+<?php
+session_start();
+require_once"../../../lib.php";
+
+if(empty($_SESSION['userid'])){;
+redirect("../../../modules/auth/users/login.php");
+}
+
+$page_title="Reports";
+include"../../../head.php";
+?>
+<div id="tabs">
+	<ul>
+		<li><a href="#tabs-1">REAL ESTATE</a></li>
+		<li><a href="#tabs-2">SALES</a></li>
+		<li><a href="#tabs-3">INVENTORY</a></li>
+		<li><a href="#tabs-4">FINANCE</a></li>
+		<li><a href="#tabs-5">HRM</a></li>
+	      <li><a href="#tabs-6">PAYROLL</a></li>
+		<li><a href="#tabs-7">CONSTRUCTION</a></li>
+       		<li><a href="#tabs-8">ASSETS</a></li>
+       		<li><a href="#tabs-9">PROCUREMENT</a></li>
+       		<li><a href="#tabs-10">TENDER</a></li>
+       	
+	</ul>
+	<div id="tabs-1" style="min-height:420px;">
+			<ul>
+			<li><a class="button icon chat" href="javascript:poptastic('../../fn/generaljournals/generaljournals2.php?acctype=32&filter=true&balance=true',700,1020);">Tenant Accounts</a></li>
+				<li><a class="button icon chat" href="javascript:poptastic('../../em/payables/payables.php',700,1020);">Invoicing Report </a></li>
+			<li><a class="button icon chat" href="javascript:poptastic('../../em/tenantpayments/tenantpayments.php',700,1020);">Tenant Payments Report </a></li>	
+			<li><a class="button icon chat" href="javascript:poptastic('../../fn/generaljournals/generaljournals2.php?acctype=33&filter=true&balance=true',700,1020);">Landlord Accounts</a></li>
+				<li><a class="button icon chat" href="javascript:poptastic('../../em/landlordpayables/landlordpayables.php',700,1020);">Invoicing Report </a></li>
+				<li><a class="button icon chat" href="javascript:poptastic('../../em/managementfees/managementfees.php',700,1020);">Mgt Fees Report </a></li>
+				<li><a class="button icon chat" href="javascript:poptastic('../../em/landlordpayments/landlordpayments.php',700,1020);">Landlord Payments Report </a></li>
+				<li><a class="button icon chat" href="javascript:poptastic('../../em/landlords/landlords.php',700,1020);">Landlords </a></li>
+				<li><a class="button icon chat" href="javascript:poptastic('../../em/plots/plots.php',700,1020);">Properties </a></li>
+				<li><a class="button icon chat" href="javascript:poptastic('../../em/houses/houses.php',700,1020);">Houses </a></li>
+				<li><a class="button icon chat" href="javascript:poptastic('../../em/tenants/tenants.php',700,1020);">Tenants </a></li>
+				<li><a class="button icon chat" href="javascript:poptastic('../../em/houseutilitys/houseutilitys.php',700,1020);">House Utilities </a></li>
+				<li><a class="button icon chat" href="javascript:poptastic('../../em/housetenants/housetenants.php',700,1020);">House Tenants </a></li>
+				<li><a class="button icon chat" href="javascript:poptastic('../../em/vacanthousereports/vacanthousereports.php',700,1020);">Vacant Houses Report </a></li>
+				<li><a class="button icon chat" href="javascript:poptastic('../../em/housenotices/housenotices.php',700,1020);">House Notices Report </a></li>
+				<li><a class="button icon chat" href="javascript:poptastic('../../em/houses/plotmonthlyreports.php',700,1020);">Property Monthly Reports </a></li>
+				<li><a class="button icon chat" href="javascript:poptastic('../../em/houseinspections/houseinspections.php',700,1020);">Unit Inspections </a></li>
+			</ul>
+            		<div style="clear:both;"></div>
+    </div><!-- TEnd -->
+    <div id="tabs-2" style="min-height:420px;">
+    <ul>
+				<li><a class="button icon chat" href="javascript:poptastic('../../pos/sales/sales.php',700,1020);">Sales Report</a></li>
+				<li><a class="button icon chat" href="javascript:poptastic('../../pos/saleorders/saleorders.php',700,1020);">Sale Orders Report</a></li>
+				<li><a class="button icon chat" href="javascript:poptastic('../../pos/customers/customers.php',700,1020);">Customers Report</a></li>
+				<li><a class="button icon chat" href="javascript:poptastic('../../pos/quotations/quotations.php',700,1020);">Quotations Report</a></li>
+				<li><a class="button icon chat" href="javascript:poptastic('../../pos/returninwards/returninwards.php',700,1020);">Returns Report</a></li>
+				<li><a class="button icon chat" href="javascript:poptastic('../../fn/generaljournals/generaljournals.php?acctype=29&filter=true&balance=true',700,1020);">Customer Accounts</a></li>
+			</ul>
+    		<div style="clear:both;"></div>
+    </div><!-- TEnd -->
+    <div id="tabs-3" style="min-height:420px;">
+    			<ul>
+    			<li><a class="button icon chat" href="javascript:poptastic('../../inv/items/items.php',700,1020);">Items Report </a></li>
+    			<li><a class="button icon chat" href="javascript:poptastic('../../inv/items/items.php',700,1020);">Reorder Level Report </a></li>
+    			<li><a class="button icon chat" href="javascript:poptastic('../../inv/items/items.php',700,1020);">Out of Stock Report </a></li>
+    			<li><a class="button icon chat" href="javascript:poptastic('../../inv/issuance/issuance.php',700,1020);">Issuance</a></li>    		
+    			<li><a class="button icon chat" href="javascript:poptastic('../../inv/purchaseorders/purchaseorders.php',700,1020);">Purchase Orders Report </a></li>	
+				<li><a class="button icon chat" href="javascript:poptastic('../../inv/purchases/purchases.php',700,1020);">Purchases Report </a></li>
+				<li><a class="button icon chat" href="javascript:poptastic('../../fn/suppliers/suppliers.php',700,1020);">Suppliers Report </a></li>
+				<li><a class="button icon chat" href="javascript:poptastic('../../inv/returnoutwards/returnoutwards.php',700,1020);">Returns Report </a></li>
+				<li><a class="button icon chat" href="javascript:poptastic('../../inv/returnnotes/returnnotes.php',700,1020);">Return Notes Report </a></li>
+				<li><a class="button icon chat" href="javascript:poptastic('../../fn/generaljournals/generaljournals.php?acctype=30&filter=true&balance=true',700,1020);">Supplier Accounts</a></li>
+			</ul>
+    		<div style="clear:both;"></div>
+    </div><!-- TEnd -->
+    
+    <div id="tabs-4" style="min-height:420px;">
+    			<ul>
+    			<li><a class="button icon chat" href="javascript:poptastic('../../fn/inctransactions/inctransactions.php',700,1020);">Incomes</a></li>
+    			<li><a class="button icon chat" href="javascript:poptastic('../../fn/exptransactions/exptransactions.php',700,1020);">Expenses</a></li>
+    			<li><a class="button icon chat" href="javascript:poptastic('../../fn/supplierpayments/supplierpayments.php',700,1020);">Supplier Payments</a></li>
+    			<li><a class="button icon chat" href="javascript:poptastic('../../fn/customerpayments/customerpayments.php',700,1020);">Customer Payments</a></li>
+    			<li><a class="button icon chat" href="javascript:poptastic('../../fn/generaljournalaccounts/generaljournalaccounts.php',700,1020);">Journal Accounts</a></li>
+				<li><a class="button icon chat" href="javascript:poptastic('../../fn/generaljournals/generaljournals.php',700,1020);">Chart of Accounts</a></li>
+				<li><a class="button icon chat" href="javascript:poptastic('../../fn/generaljournals/generaljournals.php?tb=true',700,1020);">Trial Balance</a></li>
+				<li><a class="button icon chat" href="javascript:poptastic('../../fn/generaljournals/generaljournals.php?acctype=8&balance=true',700,1020);">Banks</a></li>
+			</ul>
+    		<div style="clear:both;"></div>
+    </div><!-- TEnd -->
+    
+     <div id="tabs-5" style="min-height:420px;">
+    			<ul>
+    			<li><a class="button icon chat" href="javascript:poptastic('../../hrm/employees/employees.php',700,1020);">Employees</a></li>
+    			<li><a class="button icon chat" href="javascript:poptastic('../../hrm/employeedocuments/employeedocuments.php',700,1020);">Employee Documents</a></li>
+    			<li><a class="button icon chat" href="javascript:poptastic('../../hrm/employeequalifications/employeequalifications.php',700,1020);">Employee Qualifications</a></li>
+    			<li><a class="button icon chat" href="javascript:poptastic('../../hrm/employeecontracts/employeecontracts.php',700,1020);">Employee Contracts</a></li>
+    			<li><a class="button icon chat" href="javascript:poptastic('../../hrm/employeeinsurances/employeeinsurances.php',700,1020);">Employee Insurances</a></li>
+    			<li><a class="button icon chat" href="javascript:poptastic('../../hrm/employeedisplinarys/employeedisplinarys.php',700,1020);">Employee Discplinaries</a></li>
+    			<li><a class="button icon chat" href="javascript:poptastic('../../hrm/employeeclockings/employeeclockings.php',700,1020);">Clockings</a></li>
+			</ul>
+    		<div style="clear:both;"></div>
+    </div><!-- TEnd -->
+    
+     <div id="tabs-6" style="min-height:420px;">
+    			<ul>
+    			<li><a class="button icon chat" href="javascript:poptastic('../../hrm/employeepayments/employeepayments.php',700,1020);">Employee Payments</a></li>
+    			<li><a class="button icon chat" href="javascript:poptastic('../../hrm/employeeallowances/employeeallowances.php',700,1020);">Employee Allowances</a></li>
+    			<li><a class="button icon chat" href="javascript:poptastic('../../hrm/employeedeductions/employeedeductions.php',700,1020);">Employee Deductions</a></li>
+    			<li><a class="button icon chat" href="javascript:poptastic('../../hrm/employeesurchages/employeesurchages.php',700,1020);">Employee Surchages</a></li>
+    			<li><a class="button icon chat" href="javascript:poptastic('../../hrm/employeeloans/employeeloans.php',700,1020);">Employee Loans</a></li>
+			</ul>
+    		<div style="clear:both;"></div>
+    </div><!-- TEnd -->
+    <div id="tabs-7" style="min-height:420px;">
+    			<ul>
+    			<li><a class="button icon chat" href="javascript:poptastic('../../con/projectquantities/projectquantities.php',700,1020);">Project Quantites</a></li>
+    			<li><a class="button icon chat" href="javascript:poptastic('../../con/projectreviews/projectreviews.php',700,1020);">Project Reviews</a></li>
+    			<li><a class="button icon chat" href="javascript:poptastic('../../con/projects/projects.php',700,1020);">Projects</a></li>
+    			<li><a class="button icon chat" href="javascript:poptastic('../../con/projectstatus/projectstatus.php',700,1020);">Project Status</a></li>
+    			<li><a class="button icon chat" href="javascript:poptastic('../../con/projecttypes/projecttypes.php',700,1020);">Project Types</a></li>
+    			<li><a class="button icon chat" href="javascript:poptastic('../../con/projectusage/projectusage.php',700,1020);">Project Usage</a></li>
+    			
+    			
+			</ul>
+    		<div style="clear:both;"></div>
+    </div><!-- TEnd -->
+    
+ <div id="tabs-8" style="min-height:420px;">
+    			<ul>
+    			<li><a class="button icon chat" href="javascript:poptastic('../../assets/assets/assets.php',700,1020);">Assets</a></li>
+    			
+
+			</ul>
+    		<div style="clear:both;"></div>
+ 
+    
+ </div> <!-- tabsEnd -->
+ 
+ <div id="tabs-9" style="min-height:420px;">
+    			<ul>
+    			<li><a class="button icon chat" href="javascript:poptastic('../../proc/deliverynotes/deliverynotes.php',700,1020);">Delivery notes</a></li>
+    			<li><a class="button icon chat" href="javascript:poptastic('../../proc/inwards/inwards.php',700,1020);">Inwards</a></li>
+    			<li><a class="button icon chat" href="javascript:poptastic('../../proc/purchaseorders/purchaseorders.php',700,1020);">Purchase Orders</a></li>
+    			<li><a class="button icon chat" href="javascript:poptastic('../../proc/requisitions/requisitions.php',700,1020);">Requisitions</a></li>
+    			<li><a class="button icon chat" href="javascript:poptastic('../../proc/supplieritems/supplieritems.php',700,1020);">Supplier Items</a></li>
+    			<li><a class="button icon chat" href="javascript:poptastic('../../proc/suppliers/suppliers.php',700,1020);">Supplier Accounts</a></li>
+    			
+
+			</ul>
+    		<div style="clear:both;"></div>
+    		
+    		</div><!-- TEnd -->
+    
+ <div id="tabs-10" style="min-height:420px;">
+    			<ul>
+    			<li><a class="button icon chat" href="javascript:poptastic('../../tender/billofquantities/billofquantities.php',700,1020);">Assets</a></li>
+    			<li><a class="button icon chat" href="javascript:poptastic('../../tender/checklistdocuments/checklistdocuments.php',700,1020);">Assets</a></li>
+    			
+
+			</ul>
+    		<div style="clear:both;"></div>
+ 
+    
+ </div> <!-- tabsEnd -->
+ 
+     		<div style="clear:both;"></div>
+<?php
+include"../../../foot.php";
+?>

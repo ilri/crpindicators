@@ -1,0 +1,151 @@
+@charset "utf-8";
+/* CSS Document */
+
+body
+{
+	font-size: 12px;
+	font-family: "Trebuchet MS", "Lucida Grande", Arial, Helvetica, sans-serif;
+	margin:0px;
+	padding:0px;
+	line-height:24px;
+	background:fixed;
+}
+body a 
+{	
+	color:#003399; text-decoration:none; font-weight:900;
+}
+body a:hover
+{
+	text-decoration:underline;
+}
+body a:active
+{ 
+	color:#CE4300;
+}
+div ul li
+{
+	margin:0px;
+	padding:0px;
+}
+div p
+{
+	margin:0px;
+	padding:0px;
+}
+.buttons
+{
+	padding:0px; list-style:none; 
+	display:block; 
+	margin:3% 2% 5% 4%;
+	float:left; width:62%;
+}
+.buttons li
+{
+	display:inline;
+	font-size:16px;
+}
+.buttons li a 
+{
+	display:block;
+	background-color:#7e8d84;
+	width:30%;
+	float:left;
+	text-align:center;
+	height:50px;
+	padding-top:10px;
+	margin:5px;
+	color:#fff;
+}
+.buttons li a:hover
+{
+	background-color:#4b6154;
+	color:#FFCC33;
+	text-decoration:none;
+}
+.buttons li.diffe a
+{
+background-color:#4b6154;
+} 
+
+
+.buttons li.diffe a:hover
+{
+background-color:#7e8d84;
+} 
+form.frmlogin ul 
+{
+list-style:none; padding:0px; margin:3% 2% 5% 4%;
+}
+form.frmlogin ul li
+{
+	display:block; width:100%;
+	clear:both; margin:0px;
+	padding:6px 0px; 
+
+}
+form.frmlogin ul li label
+{
+	display:block; float:left; padding-left:10px; width:20%;
+}
+form.frmlogin ul li input
+{
+	float:left; width:auto; margin-left:10px;
+}
+.modList
+{
+	margin:10px; padding:0px; list-style:none;
+}
+.modList li
+{
+	display:inline;
+}
+.modList li a
+{
+	float:left;
+	display:block;
+	font-size:15px;
+	font-weight:bold;
+	padding:6px 8px;
+	margin:5px 7px 5px 9px;
+	width: 40%;
+	border-bottom:1px solid;
+	border-bottom-color:#E8E8D0;
+	color: #6A6A35;
+}
+.modList li a:hover
+{
+	color:#36361B;
+	text-decoration:none;
+	background-color:#E9E9D1;
+}
+.rptList
+{
+	margin:10px; padding:0px; list-style:none; float:left; width:28%;
+}
+.rptList li
+{
+	display:inline;
+}
+.rptList li a
+{
+	float:left;
+	display:block;
+	font-size:12px;
+	font-weight:bold;
+	padding:2px 5px 2px 7px;
+	margin:1px; width:96%;
+	border-bottom:1px solid;
+	border-bottom-color:#F7EFDF;
+	color: #6A6A35;
+}
+.rptList li a:hover
+{
+	color:#36361B;
+	text-decoration:none;
+	background-color:#DCE9E9;
+}
+.backli
+{
+	background:url(../images/nuback.png) repeat-x #FFFFca bottom;
+	padding:10px 5px; 
+}

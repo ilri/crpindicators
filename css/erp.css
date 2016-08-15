@@ -1,0 +1,199 @@
+@charset "utf-8";
+/* CSS Document */
+a
+{
+text-decoration:none;
+color:#0033CC;
+
+}
+a:hover{
+text-decoration:underline;
+color:#0066FF;
+}
+.topacity
+{
+opacity:70;
+opacity:0.7;
+}
+body
+{
+ font:12px tahoma; line-height:24px;
+}
+.tborder{
+border:solid 1px #cccccc;
+}
+.tborder_error{
+border:solid 1px #FFCC66;
+}
+.error
+{
+font:10px Tahoma;
+color:#CC3300;
+
+}
+.smoothborders
+{
+border:solid 1px #333333;
+}
+.modules
+{
+
+border:solid 1px #CCCCCC;
+background-color:#F1F3F5}
+
+.button
+{
+
+border:solid 1px #CCCCCC;
+width:100px;
+background-color:#F1F3F5;}
+.tdata{
+border:solid 1px #CCCCCC;
+
+}
+.tabledata{
+background-color:#CCCCFF;
+height:100px;
+}
+.tabledatasmall{
+background-color:#99CC33;
+height:50px;
+}
+
+.heading1
+{
+font: 13px;
+font-weight:bold;
+
+}
+input
+{
+border:solid 1px #ccCCCC;
+background:#ffffFF;}
+
+
+.tds
+{
+border:solid 1px #CCCCCC;
+width:100px;
+background-color:#F1F3F5
+}
+textarea{
+border:solid 1px #ccCCCC;
+background-color:#ffffFF;
+
+}
+select
+{
+border:solid 1px #ccCCCC;
+background:#ffffFF;}
+
+
+.input150
+{
+border:solid 1px #ccCCCC;
+width:150px;
+background:#ffffFF;}
+.input250
+{
+border:solid 1px #ccCCCC;
+width:250px;
+background:#ffffFF;}
+.input50
+{
+border:solid 1px #ccCCCC;
+width:50px;
+background:#ffffff;}
+
+.smallfont
+{
+font:11px Tahoma;
+}
+
+table.ttable {
+	font: 11px/24px Tahoma;
+	border-collapse: collapse;
+	
+	}
+
+
+th {
+	padding:2 0.5em;
+	text-align: left;
+	font-weight:normal;
+	color:#000000;
+	background-color:#CCD6DB;
+	}
+tr{
+	border-bottom-color:#E7EFEF;
+	border-bottom: 1px solid;
+}
+
+tr.yellow td {
+	border-bottom: 1px solid #E7EFEF;
+	background: #FFC;
+	padding:5x;
+	}
+	
+table.gridd{
+border:1px solid #cdcdcd;
+margin-top:0px;
+padding-top: 0px;
+}
+
+.gridd th
+{
+	border-left:1px solid #C5C5C5;
+	
+	text-align:center;
+}
+
+td.lines{
+	border-bottom: 1px solid #E7EFEF;
+	border-left: 1px solid #E7EFEF;
+	padding: 3px 0.5em;}
+
+td.td1st
+{
+border-bottom:none;
+border-left:none;
+}	
+	
+td.linez{
+border-bottom: 1px solid #E7EFEF;
+padding: 0 0.5em;
+}
+td.line-left{
+border-bottom: 1px solid #E7EFEF;
+padding: 0 0.5em;
+}	
+.tgrid
+{
+background-color:#ffe;
+margin-top:0px;
+padding-top: 0px;
+}
+
+.navul
+{
+list-style:none;
+margin:0px; padding:0px;
+}
+.navul li
+{
+padding:0px; margin:1px 0px;
+}
+.navul li a
+{
+display:block;
+margin:0px 2px;
+color:#E1E1E1;
+padding:0px 13px 0px 3px;
+background-color:#848442;
+text-decoration:none;
+}
+.navul li a:hover
+{
+background-color:#A9A954;
+text-decoration:none;
+}

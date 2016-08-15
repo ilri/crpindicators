@@ -1,0 +1,126 @@
+/*body{font:Arial, Helvetica, sans-serif;color:#666;}
+div.print{ width:800px; margin:4px auto; height:20px;}
+div.print a{ display:block; float:right;}
+div.print a.review{margin: 0 10px 0 0;}
+td { border: 0px solid #333; 
+}
+.tot{border-top:thin #CCC;}
+hr{border:1px solid thin rgb(238, 238, 238);}
+table { border: 0px solid #333; width: 100%; }
+          #testTable2 { 
+            width : 50%;
+		    position:relative;
+            margin-left: auto; 
+            margin-right: auto; 
+          }
+          
+          #tablePagination { 
+            background-color: #DCDCDC; 
+            font-size: 0.8em; 
+            padding: 6px 5px; 
+            height: 20px;
+			width:790px;
+			position:absolute;
+			bottom:0px;
+          }
+          
+          #tablePagination_paginater { 
+            margin-left: auto; 
+            margin-right: auto;
+          }
+          
+          #tablePagination img { 
+            padding: 0px 2px; 
+          }
+          
+          #tablePagination_perPage { 
+            float: left; display:none;
+          }
+          
+          #tablePagination_paginater { 
+            float: right; 
+          }
+		.hideTr{ display:none;}
+		#company{
+	float:left; margin:0 0 0 7px;
+	width:62%;
+}
+		#company span{ display:block; margin:0px; padding:1px 0px;}
+		#i-title{
+	float:right;
+	width:30%;
+	margin: 0 8px 0 0;
+}
+.i-details{
+	margin:20px 0 10px;
+}
+		#i-title h1{ text-align:right; display:block; margin:0px; padding:0px;}
+		#company h2{ text-transform:uppercase; display:block; margin:0px; padding:0px; }
+		#customer-info{
+	float:left;
+	width:55%;
+	margin:10px 0 0 7px;
+	clear: left;
+}
+.to{ display:block; width:400px; border:0px solid #333;}
+.c-title{
+	width:250px;
+	border:0px solid;
+	height:60px;
+	padding:4px;
+	margin:6px 0 7px 0;
+}
+#lpo{
+	float:right;
+	width:150px;
+	border:1px solid #333;
+	padding:4px;
+	margin:0 7px 0 0;
+	clear: right;
+}
+#t-foot{ width:auto;}
+.remarks{
+	float:left;
+	margin:4px 5px;
+	border:1px solid #eee;
+	width:45%;
+	height: 100px;
+	padding: 2px;
+}
+.tr-details{
+	float:right;
+	margin:6px 5px 3px;
+	width:40%;
+	clear: right;
+}
+.tr-totals{
+	float:right;
+	width:35%;
+	margin:5px;
+	font-size: 13px;
+}
+#console {
+background:none !important;
+margin:0;
+padding:0 5px 10px;
+}	
+#content {
+-moz-border-radius: 0px;
+-webkit-border-radius: 0px;
+background: none !important;
+border:0px solid #C2C0C0 !important;
+margin:0 auto;
+padding:0;
+position:relative;
+}	
+#content-flex {
+-moz-border-radius: 0px;
+-webkit-border-radius: 0px;
+background: none !important;
+border:0px solid #D3C99C !important;
+margin:0 8px;
+overflow:visible;
+}
+div.dataTables_scrollHeadInner{ display:block;}*/
+
+		

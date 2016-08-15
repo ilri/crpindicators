@@ -1,0 +1,255 @@
+/* CSS Document */
+body
+{
+	font-size: 13px;
+	font-family:Tahoma, Geneva, sans-serif;
+	background:;
+	background:url("../images/bggg.png")repeat;
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	padding:0px;	
+}
+body a 
+{	
+	color:#666; text-decoration:none; font-weight:700;
+}
+body a:hover
+{
+	/*text-decoration:underline;*/
+}
+body a:active
+{ 
+	color:#CE4300;
+}
+
+#console
+{
+	margin:0px;
+	padding:0px 5px 10px;
+	background-color: ;
+}
+#console-inner
+{
+	border:0px solid;
+	border-color:;
+	border-left:none;
+	margin:0px auto;
+	/*width: 1000px;*/
+	overflow: visible;
+}
+/*header*/
+#header{
+	margin:0px 0 0;
+	padding:0px;
+}
+#header-inner{
+margin:0px; padding:0px;
+}
+#logo-title{
+	margin:0px;
+	float: left;
+	padding: 0px;
+ }
+#logo{
+	margin: 0 0px 0 0;
+	padding: 0;
+	position:relative;
+	border: 0px dotted #ccc;
+	height: 90px;
+	position: relative;
+}
+#logo-image{
+	position:absolute;
+	top: 16px;
+	left: 18px;
+	z-index: 5;
+}
+/*-----------------------right of header Across from the logo--------------*/
+#header-right
+{
+	width:auto;
+	clear:right;
+	margin: 0 0 0 350px;
+}
+#header-blocks{
+	height:30px;
+	margin:0px 0px 8px 5px;
+	float:right;
+	clear:right;
+}
+#main{
+	padding:0px;
+	margin:0px;
+	clear: both;
+}
+#main-inner{
+	position:relative;
+	overflow:visible;
+	min-height: 478px;
+}
+.shadow{
+	padding:20px;
+	margin-left:280px;
+	width:720px;
+	background-color:#FFF;
+		-webkit-box-shadow: 0px 0px 8px rgba(0,0,0,0.3);
+	-moz-box-shadow:0px 0px 8px rgba(0,0,0,0.3);
+	box-shadow:0px 0px 8px rgba(0,0,0,0.3);
+	}
+#content{
+	padding:0px;
+	position:relative;
+	background:;
+	border: 1px solid #CCC;
+	margin:10px;
+	-webkit-box-shadow: 0px 0px 8px rgba(0,0,0,0.3);
+	-moz-box-shadow:0px 0px 8px rgba(0,0,0,0.3);
+	box-shadow:0px 0px 8px rgba(0,0,0,0.3);
+/*-moz-border-radius: 7px;
+	-webkit-border-radius: 7px*/
+}
+#content-inner{
+	margin:3px;
+	font-size:13px;
+	border: 0px dotted;
+	padding: 0 0 10px;
+}
+form{ font-size:13px;}
+form input{ font-size:13px;}
+.shadow{
+	margin:0px;
+	padding:0px;
+	width:100%;
+	border:1px solid #ccc;
+	-moz-border-radius: 8px;
+	-webkit-border-radius: 8px;
+	-webkit-box-shadow: 0px 0px 8px rgba(0,0,0,0.3);
+	-moz-box-shadow:0px 0px 8px rgba(0,0,0,0.3);
+	box-shadow:0px 0px 8px rgba(0,0,0,0.3);}
+#content-flex{
+	background:;
+	margin:20px;
+	/*padding:20px;
+	margin: 10px 8px;*/
+	min-height:420px;
+	/*overflow: visible;*/
+	border:1px solid #ccc;
+	-moz-border-radius: 8px;
+	-webkit-border-radius: 8px;
+		-webkit-box-shadow: 0px 0px 8px rgba(0,0,0,0.3);
+	-moz-box-shadow:0px 0px 8px rgba(0,0,0,0.3);
+	box-shadow:0px 0px 8px rgba(0,0,0,0.3);
+	
+}
+
+/*-------------------------End of Main-----------*/
+form.frmlogin{ padding:4px;}
+form.frmlogin ul li{ display:block; border:none; padding:7px 0px;}
+form.frmlogin label{ width:80px; display:block; float:left;}
+/*-------------------------Begining of the footer--------------------*/
+#footer{
+	margin:0px;
+	padding:0px; position:relative;
+	clear: both;
+	color: #333333;
+}
+#footer-inner{
+	margin:0 auto;
+	position:relative;
+	padding:20px 0 5px 50px;
+	max-width:960px;
+	min-width: 900px;
+	height: 30px;
+}
+#footer-message{
+	font-size: 12px;
+	color: #000000;
+}
+#footer-img{
+	position:absolute;
+	top: 9px;
+	z-index: 5;
+	right: -44px;
+}
+
+/*-------------------------End of footer-----------*/
+/***** selectBox *****/
+.selectbox{
+min-width:140px;
+padding:5px; 
+font-size:12px; 
+font-family:Arial, sans-serif; 
+color:#aaa; 
+border:solid 1px #ccc; 
+-webkit-border-radius: 3px; 
+-moz-border-radius: 3px; 
+border-radius: 3px;
+	
+	}
+:root .selectbox,
+:root .selectbox select,
+:root .selectbox::after,
+:root .selectbox::before {
+    display: inline-block;
+    vertical-align: top;
+	border:0; 
+}
+:root .selectbox::after,
+:root .selectbox::before {
+    content: "";
+    pointer-events: none; /* remove the pointer event of the custom arrow, so the mouse actually clicks the real one */
+}
+:root .selectbox,
+:root .selectbox::after {
+    background: #fff;
+    background: linear-gradient(#757575, #626262);
+}
+ 
+:root .selectbox select {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    font: normal 11px/18px "Segoe UI", Arial, Sans-serif;
+    color: #fff;
+    outline: none;
+}
+:root .css3-selectbox option {
+    background: #535353;
+}
+ 
+:root .selectbox {
+    border: solid 1px #ccc;
+    overflow: hidden;
+    cursor: pointer;
+    border-radius: 3px;
+    position: relative;
+   /* box-shadow: 0 0 0 1px #6a6a6a, 0 0 0 1px #919191 inset;*/
+}
+ 
+/* the custom arrow, achieved with element's border styles */
+:root .selectbox::before {
+    position: absolute;
+    z-index: 1;
+    top: 8px;
+    right: 4px;
+    width: 0;
+    height: 0;
+    border: solid 4px transparent;
+    border-top-color: rgba(255, 255, 255, .6);
+}
+ 
+:root .selectbox::after {
+    position: relative;
+    left: 1px;
+    width: 16px;
+    margin: 0 0 0 -17px;
+    box-shadow: -1px 0 0 1px #919191 inset;
+}
+ 
+:root .selectbox:hover::before {
+    border-top-color: #fff;
+}
+

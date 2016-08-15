@@ -1,0 +1,279 @@
+@charset "utf-8";
+
+/* CSS Document */
+.smal{size:4;}
+.forms h2, .forms label {font-family:Tahoma, Geneva, sans-serif;font-size:12px;}
+.forms table {
+	font-family:Tahoma, Geneva, sans-serif;font-size:12px;
+    margin:0px;
+    padding:0px;
+}
+.forms td label{
+	font-family:Tahoma, Geneva, sans-serif;font-size:11px;
+	font-weight:bold;
+}
+.forms tr{
+    padding:4px;
+/*     border-bottom:1px solid #eee; */
+    position:relative;
+}
+.forms td{
+    padding:4px;
+/*     border-bottom:1px solid #eee; */
+}
+
+:-moz-placeholder {
+    color: blue;
+}
+::-webkit-input-placeholder {
+    color: blue;
+}
+*:focus {outline: none;}
+.forms textarea {padding:8px; width:250px;}
+.forms button {margin-left:156px;}
+.forms li:first-child, .forms li:last-child {
+    /*border-bottom:1px solid #777;*/
+}
+.forms label {
+    margin-top: 3px;
+    display:inline-block;
+    float:left;
+    padding:3px;
+}
+.forms selectbox{width:180px;}
+.forms input.text {
+    height:28px;
+	min-width:180px;
+    padding:8px 8px;
+}
+.forms textarea {padding:4px; width:240px;height:50px;}
+.forms button {margin-left:156px;}
+.forms h2 {
+    margin:0;
+    display: inline;
+}
+.required_notification {
+	font-size:10px;
+    color:#d45252;
+    margin:5px 0 0 0;
+    display:inline;
+    float:right;
+}
+.forms input, .forms textarea {
+min-width:180px
+border:0; 
+padding:5px; 
+font-size:12px; 
+font-family:Arial, sans-serif; 
+color:#00F; 
+/* border:solid 1px #ccc;  */
+-webkit-border-radius: 3px; 
+-moz-border-radius: 3px; 
+border-radius: 3px;
+}
+.forms input:focus, .forms textarea:focus {
+    background: #fff;
+    border:1px solid #555;
+    box-shadow: 0 0 3px #aaa;
+}
+font{color:#d45252;padding:5px;}
+
+.forms input, .forms textarea {
+    /*padding-right:30px;*/
+}
+input:required, textarea:required {
+    background: #fff url(images/red_asterisk.png) no-repeat 98% center;
+}
+::-webkit-validation-bubble-message {
+    padding: 1em;
+}
+.forms input:focus:invalid, .forms textarea:focus:invalid { /* when a field is considered invalid by the browser */
+    background: #fff url(images/invalid.png) no-repeat 98% center;
+    box-shadow: 0 0 5px #d45252;
+    border-color: #b03535
+}
+.forms input:required:valid, .forms textarea:required:valid { /* when a field is considered valid by the browser */
+    background: #fff url(images/valid.png) no-repeat 98% center;
+    box-shadow: 0 0 5px #5cd053;
+    border-color: #28921f;
+}
+.form_hint {
+    background: #d45252;
+    border-radius: 3px 3px 3px 3px;
+    color: white;
+    margin-left:8px;
+    padding: 1px 6px;
+    z-index: 999; /* hints stay above all other elements */
+    position: absolute; /* allows proper formatting if hint is two lines */
+    display: none;
+}
+.form_hint::before {
+    content: "\25C0"; /* left point triangle in escaped unicode */
+    color:#d45252;
+    position: absolute;
+    top:1px;
+    left:-6px;
+}
+.forms input:focus + .form_hint {display: inline;}
+.forms input:required:valid + .form_hint {background: #28921f;} /* change form hint color when valid */
+.forms input:required:valid + .form_hint::before {color:#28921f;} /* change form hint arrow color when valid */
+
+/***** selectBox *****/
+.selectbox{
+min-width:100px;
+padding:5px; 
+font-size:12px; 
+font-family:Arial, sans-serif; 
+color:#00F; 
+border:solid 1px #ccc; 
+-webkit-border-radius: 3px; 
+-moz-border-radius: 3px; 
+border-radius: 3px;
+	
+	}
+:root .selectbox,
+:root .selectbox select,
+:root .selectbox::after,
+:root .selectbox::before {
+    display: inline-block;
+    vertical-align: top;
+	border:0; 
+}
+:root .selectbox::after,
+:root .selectbox::before {
+    content: "";
+    pointer-events: none; /* remove the pointer event of the custom arrow, so the mouse actually clicks the real one */
+}
+:root .selectbox,
+:root .selectbox::after {
+    background: #fff;
+    background: linear-gradient(#fff, #fff);
+}
+ 
+:root .selectbox select {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    font: normal 11px/18px "Segoe UI", Arial, Sans-serif;
+    color: #fff;
+    outline: none;
+}
+:root .css3-selectbox option {
+    background: #535353;
+}
+ 
+:root .selectbox {
+    border: solid 1px #ccc;
+    overflow: hidden;
+    cursor: pointer;
+    border-radius: 3px;
+    position: relative;
+   box-shadow: 0 0 0 1px #fff, 0 0 0 1px #fff inset;
+}
+ 
+/* the custom arrow, achieved with element's border styles */
+:root .selectbox::before {
+    position: absolute;
+    z-index: 1;
+    top: 8px;
+    right: 4px;
+    width: 0;
+    height: 0;
+    border: solid 4px transparent;
+    border-top-color: rgba(255, 255, 255, .6);
+}
+ 
+:root .selectbox::after {
+    position: relative;
+    left: 1px;
+    width: 16px;
+    margin: 0 0 0 -17px;
+    box-shadow: -1px 0 0 1px #919191 inset;
+}
+ 
+:root .selectbox:hover::before {
+    border-top-color: #fff;
+}
+
+
+
+
+ 
+
+/***** buttons *****/
+input.btn
+{        
+	display: inline-block;
+	min-width:80px !important;
+	white-space: nowrap;
+	background-color: #ccc;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#eee), to(#ccc));
+	background-image: -webkit-linear-gradient(top, #eee, #ccc);
+	background-image: -moz-linear-gradient(top, #eee, #ccc);
+	background-image: -ms-linear-gradient(top, #eee, #ccc);
+	background-image: -o-linear-gradient(top, #eee, #ccc);
+	background-image: linear-gradient(top, #eee, #ccc);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#eeeeee', EndColorStr='#cccccc');
+	border: 1px solid #ccc;
+	/*padding: 0 0.8em;
+	margin: 0.5em;*/
+	height:30px;
+	font: bold 12px Arial, Helvetica;
+	text-decoration: none;
+	color: #333;
+	text-shadow: 0 1px 0 rgba(255,255,255,.8);
+	-moz-border-radius: .2em;
+	-webkit-border-radius: .2em;
+	border-radius: .2em;
+	-moz-box-shadow: 0 0 1px 1px rgba(255,255,255,.8) inset, 0 1px 0 rgba(0,0,0,.3);
+	-webkit-box-shadow: 0 0 1px 1px rgba(255,255,255,.8) inset, 0 1px 0 rgba(0,0,0,.3);
+	box-shadow: 0 0 1px 1px rgba(255,255,255,.8) inset, 0 1px 0 rgba(0,0,0,.3);
+}
+.btn:hover
+{
+background-image: -moz-linear-gradient(top, #dbdbdb, #ffffff);
+background-image: -webkit-gradient(linear,left top,left bottom,
+    color-stop(0, #dbdbdb),color-stop(1, #ffffff));
+filter: progid:DXImageTransform.Microsoft.gradient
+    (startColorStr='#dbdbdb', EndColorStr='#ffffff');
+-ms-filter: "progid:DXImageTransform.Microsoft.gradient
+    (startColorStr='#dbdbdb', EndColorStr='#ffffff')";
+text-shadow: 0px -1px 0 rgba(255, 255, 255, 0.5);
+margin-top: 1px;        
+}
+.btn:active
+{
+	-moz-box-shadow: 0 0 4px 2px rgba(0,0,0,.3) inset;
+	-webkit-box-shadow: 0 0 4px 2px rgba(0,0,0,.3) inset;
+	box-shadow: 0 0 4px 2px rgba(0,0,0,.3) inset;
+	position: relative;
+	top: 1px;
+}
+.btn:focus
+{
+	outline: 0;
+	background: #fafafa;
+}    
+
+.btn:before
+{
+	background: #ccc;
+	background: rgba(0,0,0,.1);
+	float: left;
+	text-align: center;
+	font-size: 1em;
+	margin: 0 1em 0 -1em;
+	padding: 0 .2em;
+	-moz-box-shadow: 1px 0 0 rgba(0,0,0,.5), 2px 0 0 rgba(255,255,255,.5);
+	-webkit-box-shadow: 1px 0 0 rgba(0,0,0,.5), 2px 0 0 rgba(255,255,255,.5);
+	box-shadow: 1px 0 0 rgba(0,0,0,.5), 2px 0 0 rgba(255,255,255,.5);
+	-moz-border-radius: .15em 0 0 .15em;
+	-webkit-border-radius: .15em 0 0 .15em;
+	border-radius: .15em 0 0 .15em;
+        pointer-events: none;        
+}
+/** icons **/
+
+.del{background-image:url(../trash.png);}
+
