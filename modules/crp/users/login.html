@@ -154,7 +154,16 @@ showError($error);
                 </p>
                 <input type="text" placeholder="username" name="username" id="username" value="<?php echo $login->username; ?>" class="form-control">
                 <input type="password" placeholder="Password" name="password" id="password" class="form-control">
-<!--                 <input class="btn" name="action" type="submit" id="action" style="position:relative; left: 78px; top: 4px;" value="Login" /> -->
+		<select name="periodid" id="periodid" placeholder="Period" class="form-control">
+		<?php
+		$res=mysql_query("select * from crp_periods where status='active'");
+		while($row=mysql_fetch_object($res)){
+		?>
+		<option value="<?php echo $row->id; ?>" <?php if($row->id==$obj->periodid)echo "selected"; ?>><?php echo $row->name; ?></option>
+		<?php
+		}
+		?>
+		</select>
                 <input class="btn btn-lg btn-primary btn-block" name="action" id="action" type="submit" value="Login"/>
                 
             </form>

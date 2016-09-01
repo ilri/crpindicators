@@ -61,13 +61,15 @@ if($obj->action=="Login")
 		{
 			if(true)
 			{
+				$per = mysql_fetch_object(mysql_query("select * from crp_periods where id='$obj->periodid'"));
 				$user->lastlogin=date("Y-m-d H:i:s");
 				//$users->edit($user);
 				$_SESSION['username']=$user->user_login;
 				$_SESSION['password']=$user->password;
 				$_SESSION['level']=$user->levelid;//echo $_SESSION['level'];
 				$_SESSION['userid']=$user->id;
-				$_SESSION['rec_period']=$db->period;
+				$_SESSION['rec_period']=$per->name;
+				$_SESSION['periodid']=$per->id;
 				$_SESSION['user_isadmin']=$user->user_isadmin;
 				$_SESSION['user_name']=$user->user_name;
 				$_SESSION['system']="CRP Indicators";

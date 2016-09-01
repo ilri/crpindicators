@@ -8,7 +8,7 @@ function initialCap($val)
 	$j=0;
 	while($i>0)
 	{
-		$strn.=strtoupper(substr($str[$j],0,1))."".strtolower(substr($str[$j],1))." ";
+		$strn.=strtoupper(substr($str[$j],0,1))."".(substr($str[$j],1))." ";
 		$j++;
 		$i--;
 	}
@@ -184,7 +184,7 @@ function checkGroup($module, $bool=""){
 }
 
 function supervisor($id){
-  $query="select * from crp_crpuser where userid='".$_SESSION['userid']."' and supervisor=1 and crp_id='".$_SESSION['crpid']."' and valid_data in('',0)";
+  $query="select * from crp_crpuser where userid='".$_SESSION['userid']."' and supervisor=1 and crp_id='".$_SESSION['crpid']."'";
   mysql_query($query);
   if(mysql_affected_rows()>0)
     return true;
@@ -207,13 +207,13 @@ function getRecords($table){
     echo " <br/><font size='0.1'> ";
   
     if($row->cnt1>0){
-      echo " <font  color='green'>".$row->cnt1." New ";
+      echo " <font  color='green'>".$row->cnt1." ";
       if($row->cnt1==1)
 	echo "Entry";
       else
 	echo "Entries";
       echo ".</font></font>";
-      echo " <a href='approve.php?tbl=".$table."'><font color='red'>Approve All ".$row->cnt1."</font></a>";
+//       echo " <a href='approve.php?tbl=".$table."'><font color='red'>Approve All ".$row->cnt1."</font></a>";
     }
   }
 }
@@ -325,8 +325,9 @@ function getThemes($obj){
   $res = mysql_query($query);
   $arr="";
   while($row=mysql_fetch_object($res)){
-    $arr.=$row->crpid."<br/>";
+    $arr.=$row->crpid.", ";
   }
+  $arr = substr($arr,0,-2);
   return $arr;
   
 }
@@ -338,8 +339,9 @@ function getValueChains($obj){
   $res = mysql_query($query);
   $arr="";
   while($row=mysql_fetch_object($res)){
-    $arr.=$row->crpid."<br/>";
+    $arr.=$row->crpid.", ";
   }
+  $arr = substr($arr,0,-2);
   return $arr;
   
 }

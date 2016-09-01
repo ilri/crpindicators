@@ -53,6 +53,10 @@ include "../../../headerpop.php";
 		</td>
 	</tr>
 	<tr>
+		<td align="right">Active : </td>
+		<td><input type="checkbox" name="status" value="active" <?php if($obj->status=="active")echo "checked";?>/></td>
+	</tr>
+	<tr>
 		<td align="right">Remarks : </td>
 		<td><textarea name="remarks"><?php echo $obj->remarks; ?></textarea></td>
 	</tr>

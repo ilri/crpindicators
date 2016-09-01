@@ -3,6 +3,14 @@ require_once("../../../DB.php");
 require_once("../../../modules/pm/notificationrecipients/Notificationrecipients_class.php");
 
 $db = new DB();
+
+$per = $_POST['periodid'];
+if(!empty($per)){
+	$_SESSION['periodid']=$per;
+	$obj->periodid=$per;
+	$period = mysql_fetch_object(mysql_query("select * from crp_periods where id='$per'"));
+	$_SESSION['rec_period']=$period->name;
+}
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -51,41 +59,7 @@ $db = new DB();
 	<script src="../../../js/ui/jquery.ui.dialog.js"></script>
 	<script src="../../../js/ui/jquery.effects.core.js"></script>
 	<script src="../../../js/ui/jquery.ui.tabs.js"></script>
-	<script>
-	$(function() {
-		// a workaround for a flaw in the demo system (http://dev.jqueryui.com/ticket/4375), ignore!
-		$( "#dialog:ui-dialog" ).dialog( "destroy" );
-		$( "#dialog-form" ).dialog({
-			autoOpen: false,
-			modal: true,
-
-		});
-
-		$( "#nyef" )
-			.button()
-			.click(function() {
-				$( "#dialog-form" ).dialog( "open" );
-			});
-	});
-	</script>
-
-<script>
-	$(function() {
-		$( "#tabs" ).tabs();
-	});
-</script>
-
-		<script>
-		jQuery(document).ready(function () {
-			$('input.date_input').datepicker({
-					changeMonth: true,
-					changeYear: true,
-					yearRange:  '1930:2100',
-					dateFormat: 'yy-mm-dd'
-				});
-			});
-	</script>
-
+	
 	<!-- validation -->
 <script src="../../../js/tobechanged.js"></script>
 <link rel="stylesheet" href="../../../js/validationengine/css/validationEngine.jquery.css">
@@ -204,44 +178,19 @@ $(document).ready(function() {
 	TableToolsInit.sSwfPath = "../../../media/swf/ZeroClipboard.swf";
 	tbl = $('#example').DataTable( {	
 		"sDom": 'T<"H"lfr>t<"F"ip>',
-		"sScrollY": 300,
+		"sScrollY": 500,
 		"bJQueryUI": true,
-		"iDisplayLength":200,
+		"iDisplayLength":300,
+		"sScrollX": true,
 		"sPaginationType": "full_numbers",
 		"fnRowCallback": function( nRow, aaData, iDisplayIndex ) {
 		    $('td:eq(0)', nRow).html(iDisplayIndex+1);
 		}
 	} );
 	
-	if ( ! $.fn.dataTable.versionCheck( '1.10.0' ) ) {
-	    alert( 'A newer version of DataTables is required' );
-	}
-
-	$('#example tbody').delegate("tr", "click", rowClick);
-	$('#example tbody').delegate("tr", "dblclick", editRow);
 	
-	var hlr = 0;   // Reference to the currently highlighted row
-
-function rowClick()
-{
-//    if (hlr)
-//       $("td:first", hlr).parent().children().each(function(){$(this).removeClass('markrow');});
-   hlr = this;
-   
-   if(($("td:first",this).attr("class").search("markrow"))>0)
-    $("td:first", this).parent().children().each(function(){$(this).removeClass('markrow');});
-   else
-    $("td:first", this).parent().children().each(function(){$(this).addClass('markrow');});
-
-   // You can pull the values out of the row here if required
-   var a = $("td:first", this).text();
-   var b = $("td:eq(11)", this).html();
-}
 } );
 
-function editRow(){
-  //alert("");
-}
 
 </script> 
 <!-- TemplateEnd<img src="../edit.png" alt="edit" title="edit" />able -->
@@ -253,6 +202,10 @@ visibility:hidden;
 }
 .container{
   width:90%;
+}
+
+table.dataTable tbody td {
+  vertical-align: top;
 }
 </style>
 
@@ -296,7 +249,27 @@ if (get_magic_quotes_gpc()){
             <li><a href="../../../">CRP Indicators</a></li>
             <li><a href="../targets/targets.php">CRP Targets</a></li>
             <li><a href="#">CRP:&nbsp;<?php echo $_SESSION['crp'];?></a></li>
-            <li><a href="#">Period: <?php echo $_SESSION['rec_period'];?></a></li>
+            <li><a href="#">Period: <?php echo $_SESSION['rec_period'];?></a> </li>
+		
+		
+		<li>
+		<form action="" method="post">
+		<select name="periodid" id="periodid" placeholder="Period" class="form-control" onChange="this.form.submit();">
+		<?php
+		$query="select * from crp_periods";
+		if(!supervisor(0)){
+			$query.=" where status='active' ";
+		} 
+		$res=mysql_query($query);
+		while($row=mysql_fetch_object($res)){
+		?>
+		<option value="<?php echo $row->id; ?>" <?php if($row->id==$obj->periodid)echo "selected"; ?>><?php echo $row->name; ?></option>
+		<?php
+		}
+		?>
+		</select>
+		</form></li>
+		
             
         </ul>
         <!-- /.nav -->

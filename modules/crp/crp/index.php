@@ -50,6 +50,7 @@ $db = new DB();
 	<li><div class="stat_text"><a href="../../crp/groupthemes/groupthemes.php">Group Categories</a></div></li>
 	<li><div class="stat_text"><a href="../../crp/groupvaluechains/groupvaluechains.php">Group Sub Categories</a></div></li>
 	<li><div class="stat_text"><a href="../../crp/centers/centers.php">Centers</a></div></li>
+	<li><div class="stat_text"><a href="../../crp/periods/periods.php">Periods</a></div></li>
 	<?php }?>
 	
 	<li><div class="stat_text"><a href="../../crp/tablecols/excel.php">Excel Template</a></div></li>

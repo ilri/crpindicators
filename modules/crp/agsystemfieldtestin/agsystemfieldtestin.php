@@ -150,7 +150,7 @@ if(checkRule($row->id,strtolower($page_title))){
 <?php
 }elseif(supervisor($row->user)){
 ?>
-  <td><a href=''>Confirm</a></td>
+  <td><a href='../crp/confirm.php?id=<?php echo $row->id; ?>&valid_data=<?php echo $row->valid_data; ?>&tbl=agsystemfieldtestin'><?php if(empty($row->valid_data)){echo "<font style='color:red;'>Validate</font>";}else{echo "Invalidate";}?></a></td>
 <?php
 }else{
   ?>

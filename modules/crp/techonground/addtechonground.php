@@ -115,7 +115,7 @@ include "../../../headerpop.php";
 	$crps = $crps->fetchObject;
 	
 	$themes=new Themes();
-	$where=" where crp_themes.crpid='$crps->id' ";
+	$where=" where crp_themes.crpid='$crps->id' and status='active' ";
 	$fields="crp_themes.id, crp_themes.name, crp_themes.remarks, crp_themes.ipaddress, crp_themes.createdby, crp_themes.createdon, crp_themes.lasteditedby, crp_themes.lasteditedon";
 	$join="  ";
 	$having="";

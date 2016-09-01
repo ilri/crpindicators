@@ -9,8 +9,8 @@ class ThemesDBO extends DB{
  var $table="crp_themes";
 
 	function persist($obj){
-		$sql="insert into crp_themes(id,name,crpid,remarks,ipaddress,createdby,createdon,lasteditedby,lasteditedon)
-						values('$obj->id','$obj->name',$obj->crpid,'$obj->remarks','$obj->ipaddress','$obj->createdby','$obj->createdon','$obj->lasteditedby','$obj->lasteditedon')";		
+		$sql="insert into crp_themes(id,name,crpid,status,remarks,ipaddress,createdby,createdon,lasteditedby,lasteditedon)
+						values('$obj->id','$obj->name',$obj->crpid,'$obj->status','$obj->remarks','$obj->ipaddress','$obj->createdby','$obj->createdon','$obj->lasteditedby','$obj->lasteditedon')";		
 		$this->sql=$sql;
 		if(mysql_query($sql,$this->connection)){		
 			$this->id=mysql_insert_id();
@@ -22,7 +22,7 @@ class ThemesDBO extends DB{
 		if(empty($where)){
 			$where="id='$obj->id'";
 		}
-		$sql="update crp_themes set name='$obj->name',crpid=$obj->crpid,remarks='$obj->remarks',ipaddress='$obj->ipaddress',lasteditedby='$obj->lasteditedby',lasteditedon='$obj->lasteditedon' where $where ";
+		$sql="update crp_themes set name='$obj->name',crpid=$obj->crpid, status='$obj->status',remarks='$obj->remarks',ipaddress='$obj->ipaddress',lasteditedby='$obj->lasteditedby',lasteditedon='$obj->lasteditedon' where $where ";
 		$this->sql=$sql;
 		if(mysql_query($sql,$this->connection)){		
 			return true;	

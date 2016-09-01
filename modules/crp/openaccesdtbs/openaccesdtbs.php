@@ -51,7 +51,8 @@ echo $tables->remarks;
 <div class="clearb"></div>
 <div class="content-flex">
 <?php }?>
-<table style="clear:both;"  class="tgrid display" id="example" width="98%" border="0" cellspacing="0" cellpadding="2" align="center" >
+<table style="clear:both;"  class="tgrid display" id="example" width="98%" 
+border="0" cellspacing="0" cellpadding="2" align="center" >
 	<thead>
 		<tr>
 			<th>#</th>
@@ -104,7 +105,9 @@ if(existsRule($auth)){
 		  
 $grp=mysql_fetch_object(mysql_query($query));
 
-$query="select group_concat(crp_groups.group_name separator '\n') grp from crp_groups left join crp_usergroup on crp_groups.id=crp_usergroup.group_id where crp_usergroup.user_id=$row->user ";
+$query="select group_concat(crp_groups.group_name ) grp from crp_groups left 
+join crp_usergroup on crp_groups.id=crp_usergroup.group_id where 
+crp_usergroup.user_id=$row->user ";
 
 $grp1=mysql_fetch_object(mysql_query($query));
 		  
@@ -141,7 +144,7 @@ if(checkRule($row->id,strtolower($page_title))){
 <?php
 }elseif(supervisor($row->user)){
 ?>
-  <td><a href=''>Confirm</a></td>
+  <td><a href='../crp/confirm.php?id=<?php echo $row->id; ?>&valid_data=<?php echo $row->valid_data; ?>&tbl=openaccesdtbs'><?php if(empty($row->valid_data)){echo "<font style='color:red;'>Validate</font>";}else{echo "Invalidate";}?></a></td>
 <?php
 }else{
   ?>

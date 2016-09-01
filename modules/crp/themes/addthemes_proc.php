@@ -96,7 +96,7 @@ if(empty($obj->action)){
 if(!empty($id)){
 	$themes=new Themes();
 	$where=" where id=$id ";
-	$fields="crp_themes.id, crp_themes.name, crp_themes.crpid, crp_themes.remarks, crp_themes.ipaddress, crp_themes.createdby, crp_themes.createdon, crp_themes.lasteditedby, crp_themes.lasteditedon";
+	$fields="*";
 	$join="";
 	$having="";
 	$groupby="";

@@ -4,7 +4,8 @@ class Themes
 {				
 	var $id;			
 	var $name;			
-	var $crpid;			
+	var $crpid;
+	var $status;			
 	var $remarks;			
 	var $ipaddress;			
 	var $createdby;			
@@ -24,6 +25,7 @@ class Themes
 		if(empty($obj->crpid))
 			$obj->crpid='NULL';
 		$this->crpid=$obj->crpid;
+		$this->status=$obj->status;
 		$this->remarks=str_replace("'","\'",$obj->remarks);
 		$this->ipaddress=str_replace("'","\'",$obj->ipaddress);
 		$this->createdby=str_replace("'","\'",$obj->createdby);

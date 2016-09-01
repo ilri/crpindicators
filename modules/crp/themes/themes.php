@@ -41,6 +41,7 @@ if(existsRule($auth)){
 			<th>#</th>
 			<th>Category </th>
 			<th>CRP </th>
+			<th>Status</th>
 			<th>Remarks </th>
 <?php
 //Authorization.
@@ -65,7 +66,7 @@ if(existsRule($auth)){
 	<tbody>
 	<?php
 		$i=0;
-		$fields="crp_themes.id, crp_themes.name, concat(crp_crps.crpno,' ',crp_crps.crp_name) as crpid, crp_themes.remarks, crp_themes.ipaddress, crp_themes.createdby, crp_themes.createdon, crp_themes.lasteditedby, crp_themes.lasteditedon";
+		$fields="crp_themes.id, crp_themes.name, concat(crp_crps.crpno,' ',crp_crps.crp_name) as crpid, crp_themes.status, crp_themes.remarks, crp_themes.ipaddress, crp_themes.createdby, crp_themes.createdon, crp_themes.lasteditedby, crp_themes.lasteditedon";
 		$join=" left join crp_crps on crp_themes.crpid=crp_crps.id ";
 		$having="";
 		$groupby="";
@@ -79,6 +80,7 @@ if(existsRule($auth)){
 			<td><?php echo $i; ?></td>
 			<td><?php echo $row->name; ?></td>
 			<td><?php echo $row->crpid; ?></td>
+			<td><?php echo $row->status; ?></td>
 			<td><?php echo $row->remarks; ?></td>
 <?php
 //Authorization.
